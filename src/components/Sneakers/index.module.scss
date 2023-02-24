@@ -1,0 +1,198 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  .similar {
+    margin-top: 24px;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    a > div {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 10px;
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transition: 0.2s;
+      }
+      img {
+        width: 180px;
+        border-radius: 6px;
+      }
+      span {
+        position: absolute;
+        background: #0009;
+        border-radius: 4px;
+        left: 26px;
+        top: 16px;
+        padding: 0 6px;
+      }
+      div {
+        margin-top: 4px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.mainInfo {
+  display: flex;
+  img {
+    width: 350px;
+    border-radius: 10px;
+    margin-right: 32px;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    > div:nth-child(1) {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    > span {
+      font-family: "Montserrat";
+      color: #ffffffe5;
+      width: 85%;
+      height: 144px;
+      overflow-y: auto;
+      padding-right: 6px;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #131313;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #10caab;
+        border-radius: 10px;
+      }
+    }
+    .bottom {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      .characteristic {
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: center;
+        span {
+          text-transform: uppercase;
+          padding: 4px;
+          background: rgba(0, 255, 255, 0.15);
+          display: flex;
+          align-items: center;
+          width: 100%;
+          font-weight: 700;
+          letter-spacing: 1.2px;
+          h5 {
+            margin-right: 8px;
+            font-size: 15px;
+            letter-spacing: normal;
+          }
+          .rating {
+            display: flex;
+            span {
+              background: #0000;
+              font-size: 18px;
+            }
+            span.active i {
+              color: #3090ff;
+            }
+          }
+        }
+        > span:nth-child(2n) {
+          background: rgba(255, 255, 255, 0);
+        }
+      }
+      .addToCart {
+        width: 340px;
+        margin-left: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .counter {
+          width: 80%;
+          display: flex;
+          input {
+            width: 44px;
+            color: #000;
+            outline: none;
+            font-size: 16px;
+            padding: 8px;
+            background: #fff;
+            border: none;
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+          }
+          span {
+            color: #000;
+            padding: 8px 20px;
+            background: #ffffff;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            &:hover {
+              background: rgba(255, 255, 255, 0.8);
+              cursor: pointer;
+            }
+            i {
+              color: #000;
+            }
+          }
+          span:nth-child(1) {
+            border-top-left-radius: 24px;
+            border-right: 2px solid #999;
+            flex: 1;
+          }
+          span:nth-child(3) {
+            border-top-right-radius: 24px;
+            border-left: 2px solid #999;
+            flex: 1;
+          }
+        }
+        .totalPrice {
+          padding: 6px 0;
+          margin-top: 4px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          border-bottom-left-radius: 24px;
+          border-bottom-right-radius: 24px;
+          width: 80%;
+          color: #000;
+        }
+        .button {
+          width: 80%;
+          padding: 10px 0;
+          text-align: center;
+          border-radius: 8px;
+          background: linear-gradient(60deg, #26ff81d5, #1cff2ecb);
+          text-transform: uppercase;
+          font-size: 18px;
+          margin-top: 16px;
+          font-weight: 800;
+          justify-content: space-around;
+          display: flex;
+          cursor: pointer;
+          transition: 0.2s;
+          &:hover {
+            letter-spacing: 0.3px;
+            transition: 0.2s;
+            background: linear-gradient(60deg, #20da6dad, #17d426a9);
+          }
+        }
+      }
+    }
+  }
+}

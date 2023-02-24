@@ -1,0 +1,106 @@
+* {
+  font-family: "Nunito";
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 4px;
+}
+body::-webkit-scrollbar-track {
+  background: #131313;
+}
+body::-webkit-scrollbar-thumb {
+  background: #10caab;
+  border-radius: 10px;
+}
+.content {
+  background: linear-gradient(
+    60deg,
+    rgba(144, 58, 180, 1) 0%,
+    rgba(29, 253, 130, 1) 45%,
+    rgba(148, 69, 252, 1) 97%
+  );
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.popup {
+  position: fixed;
+  right: 8px;
+  bottom: 16px;
+  width: 300px;
+  background: rgba(0, 211, 95, 0.8);
+  padding: 12px;
+  border-radius: 4px;
+  transform: translateX(150%);
+  font-size: 18px;
+  transition: 0.4s;
+  &.active {
+    transform: translateX(0px);
+    transition: 0.4s;
+  }
+}
+.Routes {
+  width: calc(100% - 200px);
+  background: #292929;
+  margin: 20px 0;
+  border-radius: 12px;
+  .top {
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background: #0002;
+    .shop_logo {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        span {
+          font-size: 28px;
+          font-weight: 800;
+        }
+        i {
+          font-style: normal;
+          font-weight: 500;
+          letter-spacing: 1px;
+          color: rgba(255, 255, 255, 0.9);
+        }
+      }
+    }
+    .shop_cart {
+      cursor: pointer;
+      background: linear-gradient(
+        80deg,
+        rgb(2, 124, 57) 0%,
+        rgb(18, 192, 96) 65%
+      );
+      padding: 6px 16px;
+      border-radius: 10px;
+      width: max-content;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        margin-right: 16px;
+      }
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+}
